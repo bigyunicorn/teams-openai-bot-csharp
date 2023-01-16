@@ -3,6 +3,7 @@ Hi, thanks for stopping by my github and checking out Teams OpenAI Converation B
 This project was inspired by the following two projects.
 - [SidU](https://github.com/SidU)'s [Bot Framework GPT-3 demo](https://github.com/SidU/botframework-gpt3)
 - [leeford](https://github.com/leeford)'s [Teams OpenAI Conversation Bot](https://github.com/leeford/teams-openai-bot#readme)
+- [garrytrinder](https://github.com/garrytrinder/msteams-dalle-2-image-generator-bot)'s [DALL-E 2 Image Generator Bot for Microsoft Teams](https://github.com/garrytrinder/msteams-dalle-2-image-generator-bot)
 
 I started this project because I wanted a similar bot in C#. 
 This bot is using [Betalgo.OpenAI.GPT3](https://github.com/betalgo/openai), the OpenAI .Net library developed by [Betalgo](https://github.com/betalgo).
