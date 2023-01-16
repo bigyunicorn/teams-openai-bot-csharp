@@ -1,6 +1,6 @@
 ﻿# Teams OpenAI Conversation Bot in C#.
 Hi, thanks for stopping by my github and checking out Teams OpenAI Converation Bot in C#!
-This project was inspired by the following two projects.
+This project was inspired by the following three projects.
 - [SidU](https://github.com/SidU)'s [Bot Framework GPT-3 demo](https://github.com/SidU/botframework-gpt3)
 - [leeford](https://github.com/leeford)'s [Teams OpenAI Conversation Bot](https://github.com/leeford/teams-openai-bot#readme)
 - [garrytrinder](https://github.com/garrytrinder/msteams-dalle-2-image-generator-bot)'s [DALL-E 2 Image Generator Bot for Microsoft Teams](https://github.com/garrytrinder/msteams-dalle-2-image-generator-bot)
