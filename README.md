@@ -1,55 +1,41 @@
-﻿# teams_openai_bot_csharp
+﻿# Teams OpenAI Conversation Bot in C#.
+Hi, thanks for stopping by my github and checking out Teams OpenAI Converation Bot in C#!
+This project was inspired by the following two projects.
+- [SidU](https://github.com/SidU)'s [Bot Framework GPT-3 demo](https://github.com/SidU/botframework-gpt3)
+- [leeford](https://github.com/leeford)'s [Teams OpenAI Conversation Bot](https://github.com/leeford/teams-openai-bot#readme)
 
-Bot Framework v4 echo bot sample.
+I started this project because I wanted a similar bot in C#. 
+This bot is using [Betalgo.OpenAI.GPT3](https://github.com/betalgo/openai), the OpenAI .Net library developed by [Betalgo](https://github.com/betalgo).
 
-This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
+## Just send a message as a prompt! 
+This bot treats a message as a prompt. You can write your own, or simply try out a few from [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
+![image](https://user-images.githubusercontent.com/12367582/212578745-691328fb-1ef5-4a67-81e2-f0c6ca5843b2.png)
+![image](https://user-images.githubusercontent.com/12367582/212578761-e1dc5819-d7a9-43bd-843a-f2ceb6ee6551.png)
 
-## Prerequisites
 
-- [.NET SDK](https://dotnet.microsoft.com/download) version 6.0
+## How to try out this bot
+### Prerequisite
+- [OpenAI account](https://beta.openai.com/) and API Key
+- If you do not have your own Microsoft Tenant and Teams.. 
+  - Have a testing tenant (you can get one by signing up for the [M365 Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program) for free!)
+- Run ngrok for the port 3978 (you can change the port number in launchSettings.json)
+- Register your app that has the bot capability using Azure Portal & Developer Portal
+  - Register your app (in my case a simple bot) on AAD by following the instruction here: [Register a new application](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application#register-a-new-application) 
+  - [Register your app to Microsoft Teams using Developer Portal.](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal#register-an-app) 
+    - Get Application ID (Client ID) from the Azure Portal. 
+  - Register your bot on Developer Portal.
+    - The bot end point is: [your ngrok url]/api/messages
+    - Save bot id & bot password somewhere as we will need them.
+  - Download the app's manifest as we will need it to sideload the bot.
+- Visual Studio 2022
 
-  ```bash
-  # determine dotnet version
-  dotnet --version
-  ```
-
-## To try this sample
-
-- In a terminal, navigate to `teams_openai_bot_csharp`
-
-    ```bash
-    # change into project folder
-    cd # teams_openai_bot_csharp
-    ```
-
-- Run the bot from a terminal or from Visual Studio, choose option A or B.
-
-  A) From a terminal
-
-  ```bash
-  # run the bot
-  dotnet run
-  ```
-
-  B) Or from Visual Studio
-
-  - Launch Visual Studio
-  - File -> Open -> Project/Solution
-  - Navigate to `teams_openai_bot_csharp` folder
-  - Select `teams_openai_bot_csharp.csproj` file
-  - Press `F5` to run the project
-
-## Testing the bot using Bot Framework Emulator
-
-[Bot Framework Emulator](https://github.com/microsoft/botframework-emulator) is a desktop application that allows bot developers to test and debug their bots on localhost or running remotely through a tunnel.
-
-- Install the Bot Framework Emulator version 4.5.0 or greater from [here](https://github.com/Microsoft/BotFramework-Emulator/releases)
-
-### Connect to the bot using Bot Framework Emulator
-
-- Launch Bot Framework Emulator
-- File -> Open Bot
-- Enter a Bot URL of `http://localhost:3978/api/messages`
+### Set up
+- Open the solution file in Visual Studio 2022.
+- Update MicrosoftAppId & MicrosoftAppPassword in appSettings.json to be your bot id & password. 
+- Update openAiService.ApiKey to be yours in EchoBot.cs.
+- Now hit F5 and run the bot. 
+- Go to your Teams and sideload your bot to any type of chat. 
+- Enjoy interacting with your bot!
 
 ## Deploy the bot to Azure
 
